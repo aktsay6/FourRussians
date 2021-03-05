@@ -2,6 +2,8 @@ public class Main {
 
     public static void main(String[] args) {
 
+        // Need to implement read from file
+
         int[][] A = {
                 {0, 1, 1, 0, 1},
                 {1, 0, 0, 0, 0},
