@@ -8,26 +8,18 @@ public class Util {
         return (int)Math.pow(number, power);
     }
 
-    public static int[] getColumn(int[][] arr, int index) {
-        int[] column = new int[arr.length];
+    public static int[] getRowOrColumn(int[][] arr, int index, boolean rowWise) {
+        int[] ints = new int[arr.length];
         if (index >= arr.length) {
-            return column;
+            return ints;
         }
         for (int i = 0; i < arr.length; i++) {
-            column[i] = arr[i][index];
+            if (rowWise)
+                ints[i] = arr[index][i];
+            else
+                ints[i] = arr[i][index];
         }
-        return column;
-    }
-
-    public static int[] getRow(int[][] arr, int index) {
-        int[] row = new int[arr.length];
-        if (index >= arr.length) {
-            return row;
-        }
-        for (int i = 0; i < arr.length; i++) {
-            row[i] = arr[index][i];
-        }
-        return row;
+        return ints;
     }
 
     public static int log2(int N)

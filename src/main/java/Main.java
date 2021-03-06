@@ -1,9 +1,17 @@
+import org.apache.log4j.Level;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+
 public class Main {
+
+    static Logger logger = Logger.getLogger(Main.class);
 
     public static void main(String[] args) {
 
         // Need to implement read from file
 
+        // LogManager.getRootLogger().setLevel(Level.DEBUG);
+        logger.info("Entering the application");
         int[][] A = {
                 {0, 1, 1, 0, 1},
                 {1, 0, 0, 0, 0},

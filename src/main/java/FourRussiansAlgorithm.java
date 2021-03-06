@@ -70,7 +70,7 @@ public class FourRussiansAlgorithm {
         logger.debug("Adding another part of A matrix to list");
         int[][] tmpMatrix = new int[A.length][(int)m];
         for (int column = 0; column < m; column++) {
-            int[] tmpColumn = Util.getColumn(A, startIndex + column);
+            int[] tmpColumn = Util.getRowOrColumn(A, startIndex + column, false);
             for (int row = 0; row < A.length; row++) {
                 tmpMatrix[row][column] = tmpColumn[row];
             }
@@ -89,7 +89,7 @@ public class FourRussiansAlgorithm {
         logger.debug("Adding another part of B matrix to list");
         int[][] tmpMatrix = new int[(int)m][B.length];
         for (int row = 0; row < m; row++) {
-            tmpMatrix[row] = Util.getRow(B, startIndex + row);
+            tmpMatrix[row] = Util.getRowOrColumn(B, startIndex + row, true);
         }
         partsOfB.add(tmpMatrix);
         logger.debug("Added matrix:\n" +
