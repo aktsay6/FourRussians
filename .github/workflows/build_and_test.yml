@@ -25,3 +25,4 @@ jobs:
       - name: Maven Install
         run: |
           mvn -B clean install
+
