@@ -1,3 +1,6 @@
+package org.aktsay;
+
+import org.aktsay.util.Util;
 import org.apache.log4j.Logger;
 
 import java.util.ArrayList;
@@ -11,7 +14,7 @@ public class FourRussiansAlgorithm {
     private final List<int[][]> partsOfA = new ArrayList<>();
     private final List<int[][]> partsOfB = new ArrayList<>();
 
-    int[][] multiply(int[][] A, int[][] B) {
+    public int[][] multiply(int[][] A, int[][] B) {
         int dim = A.length;
         double m = Math.floor(Util.log2(dim));
 

@@ -1,4 +1,7 @@
+import org.aktsay.FourRussiansAlgorithm;
 import org.junit.jupiter.api.Test;
+
+import java.util.Random;
 
 public class BooleanMatrixMultiplyTest {
 
@@ -79,6 +82,14 @@ public class BooleanMatrixMultiplyTest {
         compareMatrixMultiplicationResults(A, B);
     }
 
+    @Test
+    public void test999by999() {
+        int[][] A = generateMatrix(999,999);
+        int[][] B = generateMatrix(999,999);
+
+        compareMatrixMultiplicationResults(A, B);
+    }
+
     private void compareMatrixMultiplicationResults(int[][] first, int[][] second) {
         FourRussiansAlgorithm algorithm = new FourRussiansAlgorithm();
 
@@ -86,5 +97,16 @@ public class BooleanMatrixMultiplyTest {
         int[][] defaultResult = util.defaultMatrixMultiply(first, second);
 
         util.assertMatrixEquals(solveResult, defaultResult);
+    }
+
+    private int[][] generateMatrix(int n, int m) {
+        int[][] arr = new int[n][m];
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                arr[i][j] = new Random().nextInt(2);
+            }
+        }
+        return arr;
     }
 }

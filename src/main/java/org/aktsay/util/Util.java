@@ -1,3 +1,5 @@
+package org.aktsay.util;
+
 public class Util {
 
     public static int[][] createMatrix(int n, int m) {
