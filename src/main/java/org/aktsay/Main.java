@@ -28,6 +28,7 @@ public class Main {
 
         int[][] C = algorithm.multiply(first, second);
 
+        System.out.println("Result:");
         for (int i = 0; i < C.length; i++) {
             for (int j = 0; j < C.length; j++) {
                 System.out.print(C[i][j] + " ");
