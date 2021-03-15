@@ -1,5 +1,5 @@
 ### Usage
-In order to start program you need to type `java -jar ....jar`. To start the program in the debugging mode you need to add `--logLevel debug` flag, so the line would be `java -jar ....jar --logLevel debug`.
+In order to start program you need to type `java -jar FourRussians.jar`. To start the program in the debugging mode you need to add `--logLevel debug` flag, so the line would be `java -jar FourRussians.jar --logLevel debug`.
 
 At the start of the application you will be offered to enter matrix dimension and then matrices themselves. Thereafter, the algorithm will output the answer.
 
